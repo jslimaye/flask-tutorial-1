@@ -42,7 +42,7 @@ def login():
     if form.validate_on_submit():
         if form.email.data == 'jalajlimaye@gmail.com' and form.password.data == 'password':
             flash('Login sucessful!','success')
-            return redirect(url_for('/'))
+            return redirect(url_for('home'))
         else:
             flash("Login Unsuccessful. Please try again.", 'danger')
     return render_template("login.html",title="Login",form=form)
